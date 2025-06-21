@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Ons - Mijn Sieraden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="logopng.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logopng.ico" type="image/x-icon">
+</head>
+<body>
+   <button id="hamburger" class="hamburger">☰</button>
+
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="logopng.ico" alt="Logo Mijn Webshop" class="logo-img">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over.html">Over Ons</a></li>
+          <li><a href="producten.html">Producten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <br>
+          <li><a href="cart.html">Mandje🛍️</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="cart-section h1">
+        <h1>Over Ons</h1>
+        <p>Welkom bij Mijn Sieraden! Wij zijn gepassioneerd door alles met sieraden te maken heeft, en willen je graag de mooiste producten aanbieden met een persoonlijke touch.</p>
+        
+        <p>Onze missie is om producten te creëren die je hart verwarmen en je dagelijkse leven een beetje vrolijker maken. We geloven in kwaliteit, liefde voor detail en een vriendelijke service.</p>
+        
+        <p>Ons team bestaat uit enthousiaste mensen die elke dag met veel plezier aan onze collectie en alles er omheen werken. We vinden het belangrijk dat jij je bij ons thuis voelt.</p>
+        
+        <img src="logopng.png" alt="logo" class="team-photo">
+        
+        <h2>Onze Waarden</h2>
+        <p>We staan voor eerlijke prijzen, goeie kwaliteit, goede klantenservice en persoonlijke aandacht voor elke klant. Elk product wordt met zorg gemaakt en verpakt.</p>
+        
+        <h2>Ons Verhaal</h2>
+        <p>Begonnen in 2024 op social media, en nu dan hier de website! Verkopen en bestellen is nog nooit zo gemakkelijk geweest. Met een druk op de knop heb je besteld!</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  // Optioneel: klik buiten sidebar sluit menu
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+      sidebar.classList.remove('active');
+    }
+  });
+  </script>
+</body>
+</html>

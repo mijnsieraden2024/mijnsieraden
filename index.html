@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Mijn Sieraden</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logopng.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <button id="hamburger" class="hamburger">☰</button>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="logopng.ico" alt="Logo Mijn Webshop" class="logo-img" href="index.html" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over.html">Over Ons</a></li>
+          <li><a href="producten.html">Producten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <br>
+          <li><a href="cart.html">Mandje🛍️</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <section id="home" class="section block">
+        <h1>Welkom bij Mijn Sieraden!</h1>
+        <p>Ontdek onze prachtige armbandjes en kettingen. Wij hebben sieraden precies voor jou! <br> Kijk snel rond en bestel snel, want op=op.</p>
+      </section>
+      <section id="over" class="section block">
+        <h2>Bestellen</h2>
+        <p>Je kan ook bestellen via de site. Voeg al je producten toe, vul je gegevens in en klik op bestel! Als de bestelling door ons bevestigt is krijg je hier een mailtje van. Hierin staat ook het betaalverzoek! Succes!🌸</p>
+      </section>
+      <section id="producten" class="section block">
+        <h2>Producten</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img class="product-image" src="summer.jpeg"></img>
+            <h3>Summer armband</h3>
+            <p>Speciaal voor de zomer!</p>
+          </div>
+          <div class="product-card">
+            <img class="product-image" src="lint_panter.jpeg"></img>
+            <h3>Panter lint armband</h3>
+            <p>Met leuke print.</p>
+          </div>
+          <div class="product-card">
+            <img class="product-image" src="wit_ring.jpeg"></img>
+            <h3>Witte ring</h3>
+            <p>Een leuk cadeautje!</p>
+          </div>
+        </div>
+      </section>
+
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  // Optioneel: klik buiten sidebar sluit menu
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+      sidebar.classList.remove('active');
+    }
+  });
+  </script>
+</body>
+</html>
