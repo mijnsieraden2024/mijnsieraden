@@ -69,7 +69,26 @@
 
       </section>
 
-  <script>
+<script>
+  
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const product = {
+        name: button.dataset.name,
+        price: parseFloat(button.dataset.price),
+        quantity: 1,
+        emoji: button.dataset.emoji || '💎'
+      };
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${product.name} toegevoegd aan je mandje!`);
+    });
+  });
+});
+
   const hamburger = document.querySelector('.hamburger');
   const sidebar = document.querySelector('.sidebar');
 
@@ -83,6 +102,8 @@
       sidebar.classList.remove('active');
     }
   });
-  </script>
+
+</script>
+      
 </body>
 </html>
