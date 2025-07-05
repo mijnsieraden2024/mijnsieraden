@@ -124,6 +124,7 @@ body, html {
   padding: 15px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  max-width: 30px;
 }
 .product-image {
   width: 100%;
