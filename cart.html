@@ -131,7 +131,7 @@
         if (cart.length === 0) {
           cartContainer.innerHTML = '<p class="empty-cart">Je winkelmandje is leeg.</p>';
           subtotalElement.textContent = '€0,00';
-          totalElement.textContent = '€1,21';
+          totalElement.textContent = '€1,31';
           return;
         }
 
@@ -164,7 +164,7 @@
         });
 
         const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.price) * item.quantity, 0);
-        const shipping = cart.length === 0 ? 0 : 1.21;
+        const shipping = cart.length === 0 ? 0 : 1.31;
         const total = subtotal + shipping;
 
         subtotalElement.textContent = formatPrice(subtotal);
